@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Local tokens for google auth
+token.json
+token.pickle
+test.py
+credentials.json
+.vscode/settings.json
+results.json
