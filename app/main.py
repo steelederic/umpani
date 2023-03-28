@@ -97,9 +97,10 @@ def monitor_inbox_for_subject(subject, service):
                 timestamp = now.strftime("%Y-%m-%d %H:%M:%S %Z")
                 results_data.append({"subject": subject, "timestamp": timestamp})
 
-            if os.path.exists("results.json"):
-                with open("results.json", "r") as file:
-                    existing_subjects = json.load(file)
+            if os.path.exists('results.json'):
+                with open('results.json', 'r') as file:
+                    file_content = file.read()
+                    existing_subjects = json.loads(file_content) if file_content else []
             else:
                 existing_subjects = []
 
